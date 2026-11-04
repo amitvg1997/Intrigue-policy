@@ -1,0 +1,282 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<style>body { margin: 0; }</style>
+<title>Intrigue Privacy Policy</title>
+<meta name="claude:viewport-fit-sides" content="cover">
+<meta name="description" content="Privacy Policy, Terms of Use and support for Intrigue, the secret-mission game for couples.">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Source+Serif+4:opsz,wght@8..60,600;8..60,700&family=Manrope:wght@400;600;700&display=swap">
+<style>
+  /* Layout: one reading column, the app's dark dossier palette; a sticky
+     strip of three section links, each section addressable by its anchor. */
+  :root {
+    --bg: #0E070F;
+    --surface: #1A0F1B;
+    --fg: #F3EBE6;
+    --muted: #B9A8B4;
+    --accent: #F2A08C;
+    --rule: #2E1F2F;
+    --display: "Source Serif 4", "New York", Georgia, serif;
+    --body: "Manrope", -apple-system, "Segoe UI", system-ui, sans-serif;
+    color-scheme: dark;
+  }
+  @media (prefers-color-scheme: light) {
+    :root:not([data-theme="dark"]) {
+      --bg: #FCF8F5; --surface: #F3EBE6; --fg: #1E1220; --muted: #6B5866;
+      --accent: #B84B38; --rule: #E4D8D2; color-scheme: light;
+    }
+  }
+  :root[data-theme="light"] {
+    --bg: #FCF8F5; --surface: #F3EBE6; --fg: #1E1220; --muted: #6B5866;
+    --accent: #B84B38; --rule: #E4D8D2; color-scheme: light;
+  }
+
+  body {
+    background: var(--bg);
+    color: var(--fg);
+    font: 16px/1.65 var(--body);
+    -webkit-text-size-adjust: 100%;
+  }
+  body::before {
+    content: ""; position: fixed; inset: 0 0 auto;
+    height: env(safe-area-inset-top, 0px); z-index: 10; background: var(--bg);
+  }
+  .wrap {
+    max-width: 44rem;
+    margin: 0 auto;
+    padding-left: max(20px, env(safe-area-inset-left, 0px));
+    padding-right: max(20px, env(safe-area-inset-right, 0px));
+  }
+
+  header.masthead { padding-block: 3rem 1.5rem; display: flex; flex-direction: column; gap: 0.9rem; }
+  .brand { display: flex; align-items: center; gap: 0.7rem; }
+  .brand svg { width: 26px; height: 34px; flex: none; }
+  .brand span { font: 700 1.6rem/1 var(--display); letter-spacing: -0.01em; }
+  .masthead p { margin: 0; color: var(--muted); max-width: 34rem; }
+
+  nav {
+    position: sticky; top: env(safe-area-inset-top, 0px); z-index: 5;
+    background: var(--bg);
+    border-bottom: 1px solid var(--rule);
+  }
+  nav .wrap { display: flex; gap: 1.5rem; padding-block: 0.8rem; overflow-x: auto; }
+  nav a {
+    color: var(--muted); text-decoration: none; white-space: nowrap;
+    font: 600 0.78rem/1 var(--body); letter-spacing: 0.12em; text-transform: uppercase;
+  }
+  nav a:hover, nav a:focus-visible { color: var(--accent); }
+
+  section { padding-block: 2.75rem 1rem; scroll-margin-top: 3.5rem; }
+  section + section { border-top: 1px solid var(--rule); }
+  h2 {
+    font: 700 clamp(1.9rem, 6vw, 2.5rem)/1.1 var(--display);
+    margin: 0 0 0.4rem; text-wrap: balance; letter-spacing: -0.015em;
+  }
+  .effective { color: var(--muted); font-size: 0.9rem; margin: 0 0 1.75rem; }
+  h3 {
+    font: 600 1.2rem/1.3 var(--display);
+    margin: 2.25rem 0 0.6rem; text-wrap: balance;
+    scroll-margin-top: 3.5rem;
+  }
+  p, li { max-width: 65ch; }
+  p { margin: 0 0 1rem; }
+  ul { margin: 0 0 1rem; padding-left: 1.2rem; display: flex; flex-direction: column; gap: 0.5rem; }
+  li::marker { color: var(--accent); }
+  strong { font-weight: 700; }
+  a { color: var(--accent); text-underline-offset: 3px; overflow-wrap: anywhere; }
+  a:focus-visible, button:focus-visible { outline: 2px solid var(--accent); outline-offset: 3px; border-radius: 4px; }
+
+  .contact {
+    background: var(--surface); border: 1px solid var(--rule); border-radius: 14px;
+    padding: 1.25rem 1.25rem 1.1rem; display: flex; flex-direction: column; gap: 0.75rem;
+    margin-bottom: 1.25rem;
+  }
+  .contact .label {
+    font: 600 0.72rem/1 var(--body); letter-spacing: 0.14em; text-transform: uppercase; color: var(--muted);
+  }
+  .contact .row { display: flex; flex-wrap: wrap; align-items: center; gap: 0.75rem; }
+  .contact .address { font: 600 1.1rem/1.3 var(--body); user-select: all; overflow-wrap: anywhere; min-width: 0; }
+  .contact button {
+    font: 600 0.85rem/1 var(--body); color: var(--bg); background: var(--accent);
+    border: 0; border-radius: 999px; padding: 0.6rem 1rem; cursor: pointer;
+  }
+  .contact .note { color: var(--muted); font-size: 0.9rem; margin: 0; }
+
+  footer { padding-block: 2rem 3rem; color: var(--muted); font-size: 0.85rem; border-top: 1px solid var(--rule); }
+  footer p { margin: 0; }
+
+  @media (prefers-reduced-motion: no-preference) { html { scroll-behavior: smooth; } }
+</style>
+
+</head>
+<body>
+<header class="wrap masthead">
+  <div class="brand">
+    <svg viewBox="0 0 26 34" aria-hidden="true">
+      <path d="M12.4 0.2A8.2 8.2 0 0 0 7.6 15L5 34h7.4z" fill="#D8B4C8"/>
+      <path d="M13.6 0.2A8.2 8.2 0 0 1 18.4 15L21 34h-7.4z" fill="#F2A08C"/>
+    </svg>
+    <span>Intrigue</span>
+  </div>
+  <p>The secret-mission game for couples. This page holds the app's Privacy Policy, its Terms of Use and how to reach us. It is the same text you find in the app under You › Legal.</p>
+</header>
+
+<nav aria-label="Sections">
+  <div class="wrap">
+    <a href="#privacy">Privacy Policy</a>
+    <a href="#terms">Terms of Use</a>
+    <a href="#support">Support</a>
+  </div>
+</nav>
+
+<main class="wrap">
+  <section id="privacy" aria-labelledby="privacy-title">
+    <h2 id="privacy-title">Privacy Policy</h2>
+    <p class="effective">Effective date: 2 November 2026</p>
+    <p>This Privacy Policy explains what personal data the Intrigue app ("Intrigue", "the app") handles, where that data is kept, who can see it, and the rights you have over it. It applies to the Intrigue app for iPhone. Please read it together with our Terms of Use.</p>
+<h3 id="privacy-1">1. Who is responsible</h3>
+<p>The controller responsible for the app within the meaning of the EU General Data Protection Regulation ("GDPR") and comparable laws is:</p>
+<p>Amit Vijay Ghodke<br>Email: <a href="mailto:amitvg1997@gmail.com">amitvg1997@gmail.com</a></p>
+<p>We have not appointed a data protection officer, because we are not required to. You may contact us about privacy at the email address above.</p>
+<h3 id="privacy-2">2. The short version</h3>
+<ul><li>We, the developer, do not run any server for Intrigue and we never receive what you write in the app. We have no access to your missions, hunches, guesses, names or scores.</li><li>Your missions, hunches and guesses are stored only on your iPhone until you and your partner hold the Debrief.</li><li>The information the game must share with your partner travels through Apple's iCloud, in a private space that only you and your partner can open.</li><li>Intrigue contains no advertising, no analytics, no tracking and no third-party software development kits. We do not sell or rent personal data, and we do not use it for profiling.</li></ul>
+<h3 id="privacy-3">3. Data stored only on your iPhone</h3>
+<p>The following data is created and kept on your device, in the app's own storage. It does not leave your device except as described in section 4.</p>
+<ul><li><strong>Your game:</strong> the missions dealt to you, whether you completed or vetoed them, your hunches, the hunches you chose as guesses, the ratings you gave, and the results of past rounds.</li><li><strong>Your settings:</strong> the name you chose for yourself, your partner's name as they shared it, your notification choices, whether the app lock is switched on, and which screens you have already seen.</li><li><strong>Notification timing:</strong> the times you opened the app in the last fourteen app openings, used only to choose when to show the partner activity notification. These times never leave your device.</li></ul>
+<p>Deleting the app from your iPhone deletes this data. It cannot be recovered afterwards, because no copy exists anywhere else.</p>
+<h3 id="privacy-4">4. Data shared with your partner through iCloud</h3>
+<p>To let two phones play one game, Intrigue uses Apple's CloudKit service. The partner who starts the game creates a private storage area in their own iCloud account and shares it, by name, with exactly one other person: the partner they invite. Only those two Apple accounts can read or write it. We, the developer, cannot read it.</p>
+<p>The following data is placed in that shared area:</p>
+<ul><li><strong>Pairing:</strong> a random identifier for your couple, and a pseudonymous identifier that Apple assigns to each iCloud account. This identifier does not contain your name, email address or phone number.</li><li><strong>Names:</strong> the display name each of you chose for yourself.</li><li><strong>Round status:</strong> the round number and its codename, when the round started, when the Debrief is scheduled, whether the round is paused and by whom, the relationship mode you selected ("living together" or "long distance"), and whether each of you has said you are ready for the Debrief.</li><li><strong>Progress counts:</strong> how many hunches you have logged and how many of your missions you have completed. Only the numbers are shared, never the content.</li><li><strong>Debrief presence:</strong> a timestamp showing that you have the Debrief screen open, so the two phones can begin together.</li><li><strong>The Debrief:</strong> when you both join the Debrief, your missions (their titles, descriptions, point values and whether you completed them) and the hunches you chose as guesses are shared with your partner, together with the ratings each of you gives and the final scores of the round.</li></ul>
+<p>Data in the shared area remains in the iCloud account of the partner who started the game until it is deleted as described in section 8.</p>
+<h3 id="privacy-5">5. Inviting your partner</h3>
+<p>To invite your partner, you enter the email address or phone number of their iCloud account. The app passes it to Apple only so that Apple can find that account and limit the invitation to it. The app does not store the email address or phone number, and we never receive it. You then send the invitation link yourself, through any app you choose.</p>
+<p>Apple may show the participants of a shared iCloud area their iCloud names. This is a function of iCloud and is governed by Apple's terms.</p>
+<h3 id="privacy-6">6. Data we do not collect</h3>
+<ul><li>We do not collect your name, email address, phone number, location, contacts, photos, device identifiers or advertising identifiers.</li><li>Face ID, Touch ID and your device passcode are checked by iOS. The app only learns whether the check succeeded. It never receives biometric data.</li><li>We do not use cookies, web trackers, advertising networks or analytics services.</li></ul>
+<p>If you have agreed in your iPhone's settings to share analytics or crash reports with app developers, Apple may provide us with aggregated, anonymised usage statistics and crash reports about the app. Apple controls that sharing, and you can switch it off at any time in Settings › Privacy &amp; Security › Analytics &amp; Improvements.</p>
+<h3 id="privacy-7">7. Purposes and legal basis</h3>
+<p>We process the data described above only to provide the game you asked to play: to deal and keep your missions, record your hunches, keep the two phones in step, hold the Debrief and keep your history. The legal basis is the performance of our agreement with you (Article 6(1)(b) GDPR).</p>
+<p>Notifications are sent only if you allow them in iOS and switch them on in the app. You can withdraw that choice at any time in the app's Settings or in iOS Settings.</p>
+<h3 id="privacy-8">8. How long data is kept, and deleting it</h3>
+<ul><li><strong>On your iPhone:</strong> until you delete your account in the app, or delete the app.</li><li><strong>In the shared iCloud area:</strong> until the partner who started the game deletes their account in the app, which deletes the whole shared area for both of you. When the partner who joined deletes their account, the app removes their name from the shared area and ends their access to it. Records of rounds already played remain in the other partner's iCloud account and on their phone, because they also belong to that partner's game history.</li><li><strong>Your partner's phone:</strong> what your partner has already seen (for example, missions revealed at a Debrief) remains on their phone. We cannot delete data from another person's device.</li></ul>
+<p>To delete your account, open the You tab › Settings › Delete account. If iCloud cannot be reached, nothing is deleted and the app tells you, so that you are never led to believe your data is gone when it is not.</p>
+<h3 id="privacy-9">9. Recipients and transfers</h3>
+<p>Apple Inc. and its affiliates provide iCloud, CloudKit and push notification delivery. Apple processes the data in section 4 under your own agreement with Apple and Apple's Privacy Policy (<a href="https://www.apple.com/legal/privacy/" rel="noopener">apple.com/legal/privacy</a>). Apple may store and process data in countries other than your own, including the United States. We do not transfer personal data to anyone else.</p>
+<h3 id="privacy-10">10. Security</h3>
+<p>The shared area can be opened only by the two invited Apple accounts, and data travels encrypted between your phone and iCloud. You can lock Intrigue with Face ID, Touch ID or your device passcode, and the app hides its content in the app switcher. Data exports are created with the strongest file protection iOS offers and are deleted from the app's temporary storage when you close the export screen. No method of storage or transmission is completely secure, and you are responsible for keeping your device, passcode and Apple account secure.</p>
+<h3 id="privacy-11">11. Your rights</h3>
+<p>Under the GDPR and similar laws you have the right to access your data, to have it corrected, to have it erased, to restrict its processing, to object to its processing, and to receive it in a portable format. Because your data never reaches us, you exercise these rights directly in the app:</p>
+<ul><li><strong>Access and portability:</strong> You tab › Settings › Export my data creates a file containing all of your own game data held on your iPhone.</li><li><strong>Correction:</strong> You tab › Profile &amp; Pairing lets you change your name.</li><li><strong>Erasure:</strong> You tab › Settings › Delete account.</li></ul>
+<p>You can also contact us at the email address in section 1. You have the right to lodge a complaint with a data protection supervisory authority, in particular in the country where you live or work.</p>
+<h3 id="privacy-12">12. Age</h3>
+<p>Intrigue is intended for adults. It is not directed at anyone under 18, and we do not knowingly process the data of anyone under 18.</p>
+<h3 id="privacy-13">13. Changes to this policy</h3>
+<p>We may update this Privacy Policy when the app or the law changes. The current version is always available in the app under You › Privacy Policy, with its effective date at the top. If a change materially affects how your data is handled, we will tell you in the app before it takes effect.</p>
+<h3 id="privacy-14">14. Contact</h3>
+<p>Amit Vijay Ghodke<br>Email: <a href="mailto:amitvg1997@gmail.com">amitvg1997@gmail.com</a></p>
+  </section>
+
+  <section id="terms" aria-labelledby="terms-title">
+    <h2 id="terms-title">Terms of Use</h2>
+    <p class="effective">Effective date: 2 November 2026</p>
+    <p>These Terms of Use ("Terms") are a legal agreement between you and Amit Vijay Ghodke ("we", "us") for your use of the Intrigue app ("Intrigue", "the app"). By installing, opening or using the app you agree to these Terms. If you do not agree, do not use the app.</p>
+<h3 id="terms-1">1. Who we are</h3>
+<p>Amit Vijay Ghodke<br>Email: <a href="mailto:amitvg1997@gmail.com">amitvg1997@gmail.com</a></p>
+<h3 id="terms-2">2. What Intrigue is</h3>
+<p>Intrigue is a game for two people in a relationship. Each player is given secret missions to carry out in everyday life, records hunches about what the other player may be doing, and both players compare notes at a shared Debrief. Intrigue is entertainment. It is not counselling, therapy, or relationship, medical, legal or financial advice.</p>
+<h3 id="terms-3">3. Who may use Intrigue</h3>
+<p>You must be at least 18 years old, or the age of legal majority where you live if that is higher, and able to enter into a binding agreement. You need an iPhone, an Apple account signed in to iCloud, and a partner who agrees to play with you. Each person may take part in one game at a time.</p>
+<h3 id="terms-4">4. Your licence</h3>
+<p>We grant you a personal, non-exclusive, non-transferable, revocable licence to install and use Intrigue on any Apple-branded device that you own or control, for your own non-commercial use, as permitted by the Usage Rules in the Apple Media Services Terms and Conditions. You may not copy (except as permitted by law or by those Usage Rules), modify, distribute, sell, rent, lease, sublicense, reverse engineer, decompile or attempt to derive the source code of the app, except to the extent applicable law expressly permits it despite this restriction. All rights not expressly granted remain ours.</p>
+<h3 id="terms-5">5. Playing fairly and safely</h3>
+<p>Intrigue is built on trust and on the consent of both players. When you play, you agree that you will:</p>
+<ul><li>play only with a partner who has freely agreed to play, and respect their wish to pause, veto a mission, or stop playing at any time;</li><li>treat every mission as a suggestion, never as an obligation. You decide whether and how to carry it out, and you may veto or ignore any mission;</li><li>not carry out a mission, or any part of one, in a way that is unlawful, unsafe, harmful, humiliating or against your partner's wishes, or that affects other people without their consent;</li><li>not use Intrigue to monitor, track, pressure, deceive in a harmful way, or harass anyone;</li><li>not attempt to access data you are not entitled to, interfere with the app or Apple's iCloud services, or use the app in any way that breaches the law or these Terms.</li></ul>
+<p>You are solely responsible for your own conduct, including how you carry out any mission and what you write in the app.</p>
+<h3 id="terms-6">6. Your content</h3>
+<p>Everything you write in Intrigue, such as your name and your hunches, remains yours. We do not receive it and claim no rights in it. You grant your partner the right to see the content the game shares with them, as described in our Privacy Policy, and you confirm that what you write does not infringe anyone's rights or break the law.</p>
+<h3 id="terms-7">7. Privacy</h3>
+<p>Our Privacy Policy, available in the app, explains how data is handled. In short, we do not run servers for Intrigue and we do not receive your game data. The data your game shares with your partner is stored in Apple's iCloud and is subject to your agreement with Apple.</p>
+<h3 id="terms-8">8. Apple and iCloud</h3>
+<p>Intrigue relies on Apple's iCloud and push notification services, which are provided by Apple under its own terms. We are not responsible for the availability, performance or security of services provided by Apple, or for data loss caused by them, by your Apple account settings, or by deleting the app or your account.</p>
+<h3 id="terms-9">9. Changes, interruptions and ending the game</h3>
+<p>We may change, update or stop offering the app or any feature of it. Either player may pause a round, discard a round, or delete their account at any time from the app. You may stop using Intrigue at any time by deleting your account and the app. We may suspend or end your right to use the app if you seriously or repeatedly breach these Terms.</p>
+<h3 id="terms-10">10. Warranty</h3>
+<p>To the extent permitted by applicable law, the app is provided "as is" and "as available", without warranties of any kind beyond those that cannot be excluded by law. We do not warrant that the app will be uninterrupted or free of errors, or that it will meet your expectations. Statutory rights that you have as a consumer, including rights in respect of defects in digital content, are not affected.</p>
+<p>In the event of any failure of the app to conform to any applicable warranty, you may notify Apple, and Apple will refund the purchase price, if any, for the app to you. To the maximum extent permitted by applicable law, Apple will have no other warranty obligation whatsoever with respect to the app, and any other claims, losses, liabilities, damages, costs or expenses attributable to any failure to conform to any warranty will be our sole responsibility, to the extent such responsibility cannot be excluded.</p>
+<h3 id="terms-11">11. Limitation of liability</h3>
+<p>We are liable without limitation for damage caused intentionally or through gross negligence, for injury to life, body or health, under any guarantee we have given, and wherever liability cannot be limited by law, including under product liability law.</p>
+<p>For damage caused by slight negligence, we are liable only if we breach an obligation that is essential for the proper performance of these Terms and on which you may regularly rely, and our liability is then limited to the damage that is typical and foreseeable for this kind of agreement.</p>
+<p>Otherwise, and to the extent permitted by applicable law, we are not liable for any indirect or consequential damage, or for any loss arising from how you or your partner choose to carry out a mission or respond to the game. Because Intrigue is provided free of charge, these limits also reflect the gratuitous nature of the licence where the law allows.</p>
+<h3 id="terms-12">12. Apple-specific terms</h3>
+<p>You and we acknowledge that:</p>
+<ul><li>these Terms are concluded between you and us only, and not with Apple Inc. ("Apple"). We, not Apple, are solely responsible for the app and its content;</li><li>your licence is limited to use of the app on Apple-branded products that you own or control, as permitted by the Usage Rules in the Apple Media Services Terms and Conditions;</li><li>Apple has no obligation whatsoever to provide any maintenance and support services with respect to the app. We are responsible for maintenance and support, as described in section 14;</li><li>we, not Apple, are responsible for addressing any claims by you or any third party relating to the app or your possession or use of it, including product liability claims, any claim that the app fails to conform to any applicable legal or regulatory requirement, and claims arising under consumer protection, privacy or similar legislation;</li><li>in the event of any third-party claim that the app or your possession and use of it infringes that third party's intellectual property rights, we, not Apple, will be solely responsible for the investigation, defence, settlement and discharge of that claim;</li><li>you represent and warrant that you are not located in a country that is subject to a U.S. Government embargo, or that has been designated by the U.S. Government as a "terrorist supporting" country, and that you are not listed on any U.S. Government list of prohibited or restricted parties;</li><li>you must comply with applicable third-party terms of agreement when using the app, including your agreement with Apple for iCloud and your wireless data service agreement;</li><li>Apple and Apple's subsidiaries are third-party beneficiaries of these Terms, and upon your acceptance of these Terms, Apple will have the right (and will be deemed to have accepted the right) to enforce these Terms against you as a third-party beneficiary.</li></ul>
+<h3 id="terms-13">13. Changes to these Terms</h3>
+<p>We may update these Terms to reflect changes to the app or to the law. The current version is always available in the app under You › Terms of Use, with its effective date at the top. If a change materially affects your rights, we will tell you in the app before it takes effect, and you may stop using the app if you do not agree.</p>
+<h3 id="terms-14">14. Support and contact</h3>
+<p>For questions, support or complaints, contact us at <a href="mailto:amitvg1997@gmail.com">amitvg1997@gmail.com</a>. We aim to respond within a reasonable time.</p>
+<h3 id="terms-15">15. Governing law and disputes</h3>
+<p>These Terms are governed by the laws of the Federal Republic of Germany, excluding the United Nations Convention on Contracts for the International Sale of Goods. If you are a consumer, this choice of law does not deprive you of the protection of the mandatory provisions of the law of the country where you habitually reside, and you may bring proceedings in the courts of that country.</p>
+<p>We are neither willing nor obliged to take part in dispute resolution proceedings before a consumer arbitration board.</p>
+<h3 id="terms-16">16. General</h3>
+<p>If any provision of these Terms is held to be invalid or unenforceable, the remaining provisions remain in full force. Our failure to enforce a provision is not a waiver of it. These Terms, together with the Privacy Policy, are the entire agreement between you and us about the app. You may not transfer your rights under these Terms without our consent. We may transfer our rights and obligations to another party that continues to provide the app, provided this does not reduce your rights.</p>
+  </section>
+
+  <section id="support" aria-labelledby="support-title">
+    <h2 id="support-title">Support</h2>
+    <p>Questions about the game, a problem with pairing or syncing, a privacy request or a complaint: write to us and include what you were doing when it happened. Never send your Apple account password or your device passcode.</p>
+    <div class="contact">
+      <span class="label">Email</span>
+      <div class="row">
+        <span class="address" id="support-email">amitvg1997@gmail.com</span>
+        <button type="button" id="copy-email">Copy address</button>
+      </div>
+      <p class="note" id="copy-status" aria-live="polite">We aim to reply within a reasonable time.</p>
+    </div>
+    <h3>Help inside the app</h3>
+    <ul>
+      <li><strong>How to play and the scoring rules:</strong> You tab › How to Play, and You tab › Scoring &amp; Rules.</li>
+      <li><strong>Common questions:</strong> You tab › Help &amp; FAQ.</li>
+      <li><strong>A copy of your data:</strong> You tab › Settings › Export my data.</li>
+      <li><strong>Deleting your account:</strong> You tab › Settings › Delete account.</li>
+    </ul>
+  </section>
+</main>
+
+<footer>
+  <div class="wrap"><p>Intrigue is made by Amit Vijay Ghodke.</p></div>
+</footer>
+
+<script>
+  (function () {
+    var button = document.getElementById("copy-email");
+    var status = document.getElementById("copy-status");
+    var address = document.getElementById("support-email");
+    function selectAddress() {
+      var range = document.createRange();
+      range.selectNodeContents(address);
+      var selection = window.getSelection();
+      selection.removeAllRanges();
+      selection.addRange(range);
+    }
+    button.addEventListener("click", function () {
+      var text = address.textContent.trim();
+      var copied = function () { status.textContent = "Copied. Paste it into your email app."; };
+      var fallback = function () { selectAddress(); status.textContent = "Selected. Copy it with your device's Copy command."; };
+      try {
+        if (navigator.clipboard && navigator.clipboard.writeText) {
+          navigator.clipboard.writeText(text).then(copied, fallback);
+        } else { fallback(); }
+      } catch (e) { fallback(); }
+    });
+    // Open the section a link points at, e.g. the Support URL ending in #support.
+    var target = location.hash && document.getElementById(location.hash.slice(1));
+    if (target) { target.scrollIntoView(); }
+  })();
+</script>
+</body>
+</html>
